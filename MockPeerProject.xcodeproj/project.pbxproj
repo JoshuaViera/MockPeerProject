@@ -13,6 +13,9 @@
 		61942AB021E65A950010C682 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61942AAE21E65A950010C682 /* LaunchScreen.storyboard */; };
 		61942ABA21E65BBD0010C682 /* PokemonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61942AB921E65BBD0010C682 /* PokemonVC.swift */; };
 		61942ABC21E65BD40010C682 /* MagicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61942ABB21E65BD40010C682 /* MagicVC.swift */; };
+		61942ABE21E65F360010C682 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61942ABD21E65F360010C682 /* NetworkHelper.swift */; };
+		61942AC121E65F570010C682 /* ImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61942AC021E65F570010C682 /* ImageHelper.swift */; };
+		61942AC321E65F5E0010C682 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61942AC221E65F5E0010C682 /* AppError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		61942AB121E65A950010C682 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61942AB921E65BBD0010C682 /* PokemonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonVC.swift; sourceTree = "<group>"; };
 		61942ABB21E65BD40010C682 /* MagicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicVC.swift; sourceTree = "<group>"; };
+		61942ABD21E65F360010C682 /* NetworkHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		61942AC021E65F570010C682 /* ImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageHelper.swift; sourceTree = "<group>"; };
+		61942AC221E65F5E0010C682 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +66,7 @@
 				61942AA921E65A940010C682 /* Main.storyboard */,
 				61942AB821E65B3E0010C682 /* SupportingFiles */,
 				61942AB121E65A950010C682 /* Info.plist */,
+				61942ABF21E65F3C0010C682 /* NetworkHelper */,
 			);
 			path = MockPeerProject;
 			sourceTree = "<group>";
@@ -81,6 +88,16 @@
 				61942AAE21E65A950010C682 /* LaunchScreen.storyboard */,
 			);
 			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		61942ABF21E65F3C0010C682 /* NetworkHelper */ = {
+			isa = PBXGroup;
+			children = (
+				61942ABD21E65F360010C682 /* NetworkHelper.swift */,
+				61942AC021E65F570010C682 /* ImageHelper.swift */,
+				61942AC221E65F5E0010C682 /* AppError.swift */,
+			);
+			path = NetworkHelper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +171,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61942ABE21E65F360010C682 /* NetworkHelper.swift in Sources */,
+				61942AC121E65F570010C682 /* ImageHelper.swift in Sources */,
+				61942AC321E65F5E0010C682 /* AppError.swift in Sources */,
 				61942ABA21E65BBD0010C682 /* PokemonVC.swift in Sources */,
 				61942ABC21E65BD40010C682 /* MagicVC.swift in Sources */,
 				61942AA621E65A940010C682 /* AppDelegate.swift in Sources */,
