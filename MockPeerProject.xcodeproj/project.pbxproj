@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		61942AA621E65A940010C682 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61942AA521E65A940010C682 /* AppDelegate.swift */; };
-		61942AA821E65A940010C682 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61942AA721E65A940010C682 /* ViewController.swift */; };
 		61942AAB21E65A940010C682 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61942AA921E65A940010C682 /* Main.storyboard */; };
 		61942AAD21E65A950010C682 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61942AAC21E65A950010C682 /* Assets.xcassets */; };
 		61942AB021E65A950010C682 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61942AAE21E65A950010C682 /* LaunchScreen.storyboard */; };
+		61942ABA21E65BBD0010C682 /* PokemonVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61942AB921E65BBD0010C682 /* PokemonVC.swift */; };
+		61942ABC21E65BD40010C682 /* MagicVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61942ABB21E65BD40010C682 /* MagicVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		61942AA221E65A940010C682 /* MockPeerProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MockPeerProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		61942AA521E65A940010C682 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		61942AA721E65A940010C682 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		61942AAA21E65A940010C682 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		61942AAC21E65A950010C682 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		61942AAF21E65A950010C682 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		61942AB121E65A950010C682 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		61942AB921E65BBD0010C682 /* PokemonVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonVC.swift; sourceTree = "<group>"; };
+		61942ABB21E65BD40010C682 /* MagicVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +56,31 @@
 		61942AA421E65A940010C682 /* MockPeerProject */ = {
 			isa = PBXGroup;
 			children = (
-				61942AA521E65A940010C682 /* AppDelegate.swift */,
-				61942AA721E65A940010C682 /* ViewController.swift */,
+				61942AB721E65B360010C682 /* Controllers */,
 				61942AA921E65A940010C682 /* Main.storyboard */,
-				61942AAC21E65A950010C682 /* Assets.xcassets */,
-				61942AAE21E65A950010C682 /* LaunchScreen.storyboard */,
+				61942AB821E65B3E0010C682 /* SupportingFiles */,
 				61942AB121E65A950010C682 /* Info.plist */,
 			);
 			path = MockPeerProject;
+			sourceTree = "<group>";
+		};
+		61942AB721E65B360010C682 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				61942ABB21E65BD40010C682 /* MagicVC.swift */,
+				61942AB921E65BBD0010C682 /* PokemonVC.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		61942AB821E65B3E0010C682 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				61942AA521E65A940010C682 /* AppDelegate.swift */,
+				61942AAC21E65A950010C682 /* Assets.xcassets */,
+				61942AAE21E65A950010C682 /* LaunchScreen.storyboard */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,7 +154,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61942AA821E65A940010C682 /* ViewController.swift in Sources */,
+				61942ABA21E65BBD0010C682 /* PokemonVC.swift in Sources */,
+				61942ABC21E65BD40010C682 /* MagicVC.swift in Sources */,
 				61942AA621E65A940010C682 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
