@@ -22,6 +22,7 @@
 		61942ACD21E6616F0010C682 /* MagicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61942ACC21E6616F0010C682 /* MagicCell.swift */; };
 		61942ACF21E667DC0010C682 /* PokemonDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61942ACE21E667DC0010C682 /* PokemonDetailVC.swift */; };
 		61942AD121E667EA0010C682 /* MagicDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61942AD021E667EA0010C682 /* MagicDetailVC.swift */; };
+		61942AD921E66C220010C682 /* AttackDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61942AD821E66C220010C682 /* AttackDetailCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		61942ACC21E6616F0010C682 /* MagicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicCell.swift; sourceTree = "<group>"; };
 		61942ACE21E667DC0010C682 /* PokemonDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailVC.swift; sourceTree = "<group>"; };
 		61942AD021E667EA0010C682 /* MagicDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicDetailVC.swift; sourceTree = "<group>"; };
+		61942AD821E66C220010C682 /* AttackDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttackDetailCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,10 +89,8 @@
 		61942AB721E65B360010C682 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				61942ABB21E65BD40010C682 /* MagicVC.swift */,
-				61942AB921E65BBD0010C682 /* PokemonVC.swift */,
-				61942ACE21E667DC0010C682 /* PokemonDetailVC.swift */,
-				61942AD021E667EA0010C682 /* MagicDetailVC.swift */,
+				61942ADA21E6712A0010C682 /* Magic */,
+				61942ADB21E671310010C682 /* Pokemon */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -119,8 +119,8 @@
 		61942AC821E661040010C682 /* APIClients */ = {
 			isa = PBXGroup;
 			children = (
-				61942AC421E660EA0010C682 /* PokemonAPIClient.swift */,
-				61942AC621E660FD0010C682 /* MagicAPIClient.swift */,
+				61942ADF21E6717E0010C682 /* Pokemon */,
+				61942ADE21E671740010C682 /* Magic */,
 			);
 			path = APIClients;
 			sourceTree = "<group>";
@@ -128,10 +128,61 @@
 		61942ACB21E6615F0010C682 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				61942AC921E6615C0010C682 /* PokemonCell.swift */,
-				61942ACC21E6616F0010C682 /* MagicCell.swift */,
+				61942ADC21E6715F0010C682 /* Pokemon */,
+				61942ADD21E6716B0010C682 /* Magic */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		61942ADA21E6712A0010C682 /* Magic */ = {
+			isa = PBXGroup;
+			children = (
+				61942ABB21E65BD40010C682 /* MagicVC.swift */,
+				61942AD021E667EA0010C682 /* MagicDetailVC.swift */,
+			);
+			path = Magic;
+			sourceTree = "<group>";
+		};
+		61942ADB21E671310010C682 /* Pokemon */ = {
+			isa = PBXGroup;
+			children = (
+				61942AB921E65BBD0010C682 /* PokemonVC.swift */,
+				61942ACE21E667DC0010C682 /* PokemonDetailVC.swift */,
+			);
+			path = Pokemon;
+			sourceTree = "<group>";
+		};
+		61942ADC21E6715F0010C682 /* Pokemon */ = {
+			isa = PBXGroup;
+			children = (
+				61942AC921E6615C0010C682 /* PokemonCell.swift */,
+				61942AD821E66C220010C682 /* AttackDetailCell.swift */,
+			);
+			path = Pokemon;
+			sourceTree = "<group>";
+		};
+		61942ADD21E6716B0010C682 /* Magic */ = {
+			isa = PBXGroup;
+			children = (
+				61942ACC21E6616F0010C682 /* MagicCell.swift */,
+			);
+			path = Magic;
+			sourceTree = "<group>";
+		};
+		61942ADE21E671740010C682 /* Magic */ = {
+			isa = PBXGroup;
+			children = (
+				61942AC621E660FD0010C682 /* MagicAPIClient.swift */,
+			);
+			path = Magic;
+			sourceTree = "<group>";
+		};
+		61942ADF21E6717E0010C682 /* Pokemon */ = {
+			isa = PBXGroup;
+			children = (
+				61942AC421E660EA0010C682 /* PokemonAPIClient.swift */,
+			);
+			path = Pokemon;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,6 +267,7 @@
 				61942ABC21E65BD40010C682 /* MagicVC.swift in Sources */,
 				61942ACD21E6616F0010C682 /* MagicCell.swift in Sources */,
 				61942AA621E65A940010C682 /* AppDelegate.swift in Sources */,
+				61942AD921E66C220010C682 /* AttackDetailCell.swift in Sources */,
 				61942ACA21E6615C0010C682 /* PokemonCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

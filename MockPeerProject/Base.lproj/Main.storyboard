@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--MAGIC-->
+        <!--POKEMON-->
         <scene sceneID="eR9-oC-E3x">
             <objects>
-                <viewController id="aDj-P7-cLB" customClass="MagicVC" customModule="MockPeerProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="aDj-P7-cLB" customClass="PokemonVC" customModule="MockPeerProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cpa-MS-5bM">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -27,7 +27,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Hft-JD-PQv" customClass="MagicCell" customModule="MockPeerProject" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Hft-JD-PQv" customClass="PokemonCell" customModule="MockPeerProject" customModuleProvider="target">
                                         <rect key="frame" x="0.5" y="0.0" width="374" height="325"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -63,16 +63,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mn5-Nc-v8j"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="MAGIC" id="R3f-of-5KJ"/>
+                    <tabBarItem key="tabBarItem" title="POKEMON" id="R3f-of-5KJ"/>
+                    <connections>
+                        <outlet property="collectionView" destination="AFv-JC-nS7" id="AVV-nh-NVQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ruQ-q2-BOj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="994.45277361319347"/>
         </scene>
-        <!--Magic DetailVC-->
+        <!--Pokemon DetailVC-->
         <scene sceneID="gwH-Mp-0CR">
             <objects>
-                <viewController id="WgW-k5-STc" customClass="MagicDetailVC" customModule="MockPeerProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="WgW-k5-STc" customClass="PokemonDetailVC" customModule="MockPeerProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VAX-5X-UcO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,7 +104,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="MeX-kx-5fe">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="MeX-kx-5fe" customClass="AttackDetailCell" customModule="MockPeerProject" customModuleProvider="target">
                                                 <rect key="frame" x="37.5" y="0.0" width="196" height="212"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -123,7 +126,7 @@
                                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BOe-oS-cUg">
                                                             <rect key="frame" x="13" y="96" width="170" height="103"/>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                            <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
@@ -142,6 +145,11 @@
                                                     <constraint firstItem="BOe-oS-cUg" firstAttribute="leading" secondItem="MeX-kx-5fe" secondAttribute="leadingMargin" constant="5" id="plg-1U-lbH"/>
                                                     <constraint firstAttribute="bottomMargin" secondItem="BOe-oS-cUg" secondAttribute="bottom" constant="5" id="vfV-7s-ln0"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="attackDescription" destination="BOe-oS-cUg" id="5Js-TR-TLl"/>
+                                                    <outlet property="attackName" destination="cZH-cO-kfk" id="cbf-gL-phi"/>
+                                                    <outlet property="attackPower" destination="gib-mV-ruj" id="hY5-u0-CNY"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
@@ -172,15 +180,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TpT-aQ-yM6"/>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="oAn-aB-PeS" id="yPS-Cv-BCa"/>
+                        <outlet property="pokemonPhoto" destination="oxE-bv-m4C" id="Vog-ca-Avo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jmi-v1-hnV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1101.5999999999999" y="993.55322338830592"/>
         </scene>
-        <!--POKEMON-->
+        <!--MAGIC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="PokemonVC" customModule="MockPeerProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MagicVC" customModule="MockPeerProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -195,7 +207,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bMm-YR-TDU" customClass="PokemonCell" customModule="MockPeerProject" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="bMm-YR-TDU" customClass="MagicCell" customModule="MockPeerProject" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="357"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -231,16 +243,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="POKEMON" id="MsT-hV-ifG"/>
+                    <tabBarItem key="tabBarItem" title="MAGIC" id="MsT-hV-ifG"/>
+                    <connections>
+                        <outlet property="collectionView" destination="8MW-wB-i8D" id="Syp-1y-qA9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1076" y="132.68365817091455"/>
         </scene>
-        <!--Pokemon DetailVC-->
+        <!--Magic DetailVC-->
         <scene sceneID="01r-bI-acB">
             <objects>
-                <viewController id="9cI-kI-H60" customClass="PokemonDetailVC" customModule="MockPeerProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9cI-kI-H60" customClass="MagicDetailVC" customModule="MockPeerProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4C9-ss-MGz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -308,6 +323,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="sms-Lx-Rb0"/>
                     </view>
+                    <connections>
+                        <outlet property="langauge" destination="gSA-24-8am" id="ewQ-9c-IVX"/>
+                        <outlet property="magicDescription" destination="bGP-mR-n0k" id="tQw-9J-3lX"/>
+                        <outlet property="magicPhoto" destination="WXk-JZ-wQO" id="Lp4-0K-FIl"/>
+                        <outlet property="name" destination="pLE-jC-AWz" id="7nt-bw-f1k"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9lj-8p-KFf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

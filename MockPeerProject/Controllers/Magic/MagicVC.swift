@@ -1,5 +1,5 @@
 //
-//  PokemonDetailVC.swift
+//  MagicVC.swift
 //  MockPeerProject
 //
 //  Created by Joshua Viera on 1/9/19.
@@ -8,13 +8,7 @@
 
 import UIKit
 
-class PokemonDetailVC: UIViewController {
-
-    @IBOutlet weak var 
-    @IBOutlet weak var
-    @IBOutlet weak var
-    @IBOutlet weak var
-    @IBOutlet weak var
+class MagicVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,7 +9,13 @@
 import UIKit
 
 class MagicDetailVC: UIViewController {
-
+    
+    @IBOutlet weak var magicPhoto: UIImageView!
+    @IBOutlet weak var name:UILabel!
+    @IBOutlet weak var langauge: UILabel!
+    @IBOutlet weak var magicDescription: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
