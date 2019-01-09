@@ -19,36 +19,35 @@
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AFv-JC-nS7">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
-                                <color key="backgroundColor" red="0.60434245440000001" green="0.99193829300000003" blue="0.65181949839999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="yHY-RY-q6x">
-                                    <size key="itemSize" width="374" height="325"/>
+                                    <size key="itemSize" width="298" height="309"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PokemonCell" id="Hft-JD-PQv" customClass="PokemonCell" customModule="MockPeerProject" customModuleProvider="target">
-                                        <rect key="frame" x="0.5" y="0.0" width="374" height="325"/>
+                                        <rect key="frame" x="38.5" y="0.0" width="298" height="309"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="374" height="325"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="298" height="309"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Ls-0X-j0e">
-                                                    <rect key="frame" x="8" y="28" width="358" height="289"/>
-                                                </imageView>
                                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="c2U-35-UF0">
                                                     <rect key="frame" x="177" y="152" width="20" height="20"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </activityIndicatorView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Ls-0X-j0e">
+                                                    <rect key="frame" x="14" y="34" width="270" height="261"/>
+                                                </imageView>
                                             </subviews>
                                         </view>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="4Ls-0X-j0e" firstAttribute="top" secondItem="Hft-JD-PQv" secondAttribute="topMargin" id="OM3-Bg-f0C"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="4Ls-0X-j0e" secondAttribute="trailing" id="Pu9-Om-H2y"/>
-                                            <constraint firstItem="4Ls-0X-j0e" firstAttribute="leading" secondItem="Hft-JD-PQv" secondAttribute="leadingMargin" id="Xpn-EY-Szt"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="4Ls-0X-j0e" secondAttribute="bottom" id="efk-Eo-Quw"/>
+                                            <constraint firstItem="4Ls-0X-j0e" firstAttribute="top" secondItem="Hft-JD-PQv" secondAttribute="topMargin" constant="6" id="Lj5-GE-9sK"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="4Ls-0X-j0e" secondAttribute="bottom" constant="6" id="ROq-gF-WQa"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="4Ls-0X-j0e" secondAttribute="trailing" constant="6" id="RZk-xd-lpy"/>
+                                            <constraint firstItem="4Ls-0X-j0e" firstAttribute="leading" secondItem="Hft-JD-PQv" secondAttribute="leadingMargin" constant="6" id="qns-72-gpH"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="pokemonImage" destination="4Ls-0X-j0e" id="QJS-T7-yqr"/>
@@ -78,7 +77,7 @@
         <!--Pokemon DetailVC-->
         <scene sceneID="gwH-Mp-0CR">
             <objects>
-                <viewController id="WgW-k5-STc" customClass="PokemonDetailVC" customModule="MockPeerProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Pokemon" useStoryboardIdentifierAsRestorationIdentifier="YES" id="WgW-k5-STc" customClass="PokemonDetailVC" customModule="MockPeerProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VAX-5X-UcO">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -86,6 +85,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wQf-bt-qwC">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="dimiss:" destination="WgW-k5-STc" eventType="touchUpInside" id="3Yi-WC-YXx"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hjg-QI-2JG">
                                 <rect key="frame" x="20" y="40" width="335" height="607"/>
@@ -217,7 +219,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="357"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w1z-KP-Cyf">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w1z-KP-Cyf">
                                                     <rect key="frame" x="8" y="28" width="359" height="321"/>
                                                 </imageView>
                                                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="i1E-ZQ-Sse">
@@ -258,7 +260,7 @@
         <!--Magic DetailVC-->
         <scene sceneID="01r-bI-acB">
             <objects>
-                <viewController id="9cI-kI-H60" customClass="MagicDetailVC" customModule="MockPeerProject" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Magic" useStoryboardIdentifierAsRestorationIdentifier="YES" id="9cI-kI-H60" customClass="MagicDetailVC" customModule="MockPeerProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4C9-ss-MGz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

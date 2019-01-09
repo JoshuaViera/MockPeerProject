@@ -10,4 +10,7 @@ import UIKit
 
 class PokemonCell: UICollectionViewCell {
     @IBOutlet weak var pokemonImage: UIImageView!
+    override func prepareForReuse() {
+        pokemonImage.image = nil 
+    }
 }

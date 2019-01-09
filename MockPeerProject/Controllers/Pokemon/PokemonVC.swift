@@ -52,20 +52,20 @@ extension PokemonVC: UICollectionViewDataSource {
             if let image = image {
                  cell.pokemonImage.image = image
             }
-        }
+        } 
         return cell
     }
 }
 
 extension PokemonVC: UICollectionViewDelegateFlowLayout {
-    //This handles the size and layout
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize.init(width: 400, height: 400)
+        return CGSize.init(width: 120, height: 180)
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // this ocntrols what happens when you click on a cell
-        print("it does the thing")
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let secondVC = storyboard.instantiateViewController(withIdentifier: "Pokemon") as! PokemonDetailVC
+        self.present(secondVC, animated: true, completion: nil)
     }
 }
 
