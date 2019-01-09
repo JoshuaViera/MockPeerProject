@@ -21,7 +21,8 @@ public final class NetworkHelper {
             completionHandler(AppError.badURL("\(endpointURLString)"), nil, nil)
             return
         }
-        var request = URLRequest(url: url)
+        
+        let request = URLRequest(url: url)
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
             if let error = error {
                 completionHandler(AppError.networkError(error), nil, response as? HTTPURLResponse)
