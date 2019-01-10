@@ -16,7 +16,7 @@ struct Magic : Codable {
     var name: String?
     var imageUrl: String?
     var text: String?
-    var foreignNames: [ForeignNames]?
+    var foreignNames: [ForeignNames]
 }
 
 struct ForeignNames : Codable{

@@ -25,6 +25,7 @@
 		61942AD921E66C220010C682 /* AttackDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61942AD821E66C220010C682 /* AttackDetailCell.swift */; };
 		61942AE221E672D10010C682 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61942AE121E672D10010C682 /* Pokemon.swift */; };
 		61942AE421E672D80010C682 /* Magic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61942AE321E672D80010C682 /* Magic.swift */; };
+		61ECC23821E7E31F0044CB27 /* MagicDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61ECC23721E7E31F0044CB27 /* MagicDetailCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		61942AD821E66C220010C682 /* AttackDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttackDetailCell.swift; sourceTree = "<group>"; };
 		61942AE121E672D10010C682 /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		61942AE321E672D80010C682 /* Magic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Magic.swift; sourceTree = "<group>"; };
+		61ECC23721E7E31F0044CB27 /* MagicDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicDetailCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				61942ACC21E6616F0010C682 /* MagicCell.swift */,
+				61ECC23721E7E31F0044CB27 /* MagicDetailCell.swift */,
 			);
 			path = Magic;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 				61942AC721E660FD0010C682 /* MagicAPIClient.swift in Sources */,
 				61942AC121E65F570010C682 /* ImageHelper.swift in Sources */,
 				61942AD121E667EA0010C682 /* MagicDetailVC.swift in Sources */,
+				61ECC23821E7E31F0044CB27 /* MagicDetailCell.swift in Sources */,
 				61942AC321E65F5E0010C682 /* AppError.swift in Sources */,
 				61942ABA21E65BBD0010C682 /* PokemonVC.swift in Sources */,
 				61942ACF21E667DC0010C682 /* PokemonDetailVC.swift in Sources */,

@@ -23,7 +23,7 @@ class PokemonDetailVC: UIViewController {
     }
     
     func updateUI() {
-        ImageHelper.shared.fetchImage(urlString: (pokemon?.imageUrl) ?? "no url", completionHandler: { (error, image) in
+        ImageHelper.shared.fetchImage(urlString: (pokemon?.imageUrlHiRes) ?? "no url", completionHandler: { (error, image) in
             
             if let error = error {
                 print("\(error)")
