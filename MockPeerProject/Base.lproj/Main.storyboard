@@ -102,7 +102,6 @@
                                     </activityIndicatorView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oAn-aB-PeS">
                                         <rect key="frame" x="32" y="263.5" width="231" height="247.5"/>
-                                        <color key="backgroundColor" red="0.60434245440000001" green="0.99193829300000003" blue="0.65181949839999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="81S-XJ-BNa">
                                             <size key="itemSize" width="196" height="212"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -138,7 +137,6 @@
                                                         </textView>
                                                     </subviews>
                                                 </view>
-                                                <color key="backgroundColor" red="1" green="0.72766665949999998" blue="0.84892938230000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <constraints>
                                                     <constraint firstItem="BOe-oS-cUg" firstAttribute="top" secondItem="gib-mV-ruj" secondAttribute="bottom" constant="5" id="8vK-a0-5eC"/>
                                                     <constraint firstItem="cZH-cO-kfk" firstAttribute="leading" secondItem="MeX-kx-5fe" secondAttribute="leadingMargin" constant="16" id="Beu-PN-79i"/>
