@@ -25,12 +25,13 @@ class PokemonVC: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         PokemonAPIClient.getPokemon { (error, pokemon) in
+            
             if let error = error {
                 print(error)
             }
             if let pokemon = pokemon {
                 self.myImages = pokemon
-                print(pokemon.count)
+//                print(pokemon.count)
             }
         }
     }
@@ -64,8 +65,11 @@ extension PokemonVC: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let secondVC = storyboard.instantiateViewController(withIdentifier: "Pokemon") as! PokemonDetailVC
-        self.present(secondVC, animated: true, completion: nil)
+        let DetailVC = storyboard.instantiateViewController(withIdentifier: "Pokemon") as! PokemonDetailVC
+        DetailVC.pokemon = myImages[indexPath.row]
+        DetailVC.modalTransitionStyle = .crossDissolve
+        DetailVC.modalPresentationStyle = .overCurrentContext
+        self.present(DetailVC, animated: true, completion: nil)
     }
 }
 

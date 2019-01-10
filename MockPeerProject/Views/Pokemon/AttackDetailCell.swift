@@ -9,7 +9,13 @@
 import UIKit
 
 class AttackDetailCell: UICollectionViewCell {
+    
     @IBOutlet weak var attackName: UILabel!
     @IBOutlet weak var attackPower: UILabel!
     @IBOutlet weak var attackDescription: UITextView!
+
+    
+    
+    
+    
 }

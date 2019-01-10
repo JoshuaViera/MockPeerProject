@@ -15,7 +15,7 @@ struct Cards: Codable {
 struct Pokemon : Codable {
     var imageUrl: String
     var imageUrlHiRes: String
-    var attack: [AttackWrapper]?
+    var attacks: [AttackWrapper]
 }
 
 struct AttackWrapper: Codable {

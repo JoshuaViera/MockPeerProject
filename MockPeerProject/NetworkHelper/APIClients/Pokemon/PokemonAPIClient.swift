@@ -12,7 +12,7 @@ final class PokemonAPIClient {
     
     static func getPokemon(completionHandler: @escaping (Error?, [Pokemon]? ) -> Void){
         let urlString = "https://api.pokemontcg.io/v1/cards?contains=imageUrl,imageUrlHiRes,attacks"
-//        guard let url = URL(string: urlString) else {return}
+        //        guard let url = URL(string: urlString) else {return}
         NetworkHelper.shared.performDataTask(endpointURLString: urlString) { (error, data, httpResponse) in
             if let error = error{
                 print(error)
@@ -20,16 +20,18 @@ final class PokemonAPIClient {
             }
             if let data = data {
                 do {
-                    let thing = try JSONDecoder().decode(Cards.self, from: data)
-                    
-                    completionHandler(nil, thing.cards)
-                    print("I GOT DATA")
+                    let pokemon = try JSONDecoder().decode(Cards.self, from: data)
+                    completionHandler(nil, pokemon.cards)
                 }catch {
                     completionHandler(AppError.decodingError(error), nil)
                 }
             }
             if let response = httpResponse{
-                print("Response Code is: \(response)")
+                if response.statusCode == 200{
+                    print("\(response.statusCode)")
+                } else {
+                    print("\(response.statusCode)")
+                }
             }
         }
     }
