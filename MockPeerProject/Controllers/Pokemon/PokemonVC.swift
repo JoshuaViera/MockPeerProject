@@ -12,7 +12,7 @@ class PokemonVC: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var myImages = [Pokemon](){
+    var myPokemon = [Pokemon](){
         didSet{
             DispatchQueue.main.async{
                 self.collectionView.reloadData()
@@ -30,7 +30,7 @@ class PokemonVC: UIViewController {
                 print(error)
             }
             if let pokemon = pokemon {
-                self.myImages = pokemon
+                self.myPokemon = pokemon
 //                print(pokemon.count)
             }
         }
@@ -40,13 +40,13 @@ class PokemonVC: UIViewController {
 }
 extension PokemonVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return myImages.count
+        return myPokemon.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PokemonCell", for: indexPath) as? PokemonCell else {return UICollectionViewCell()}
         
-        ImageHelper.shared.fetchImage(urlString: myImages[indexPath.row].imageUrl) { (error, image) in
+        ImageHelper.shared.fetchImage(urlString: myPokemon[indexPath.row].imageUrl) { (error, image) in
             if let error = error{
                 print("\(error)")
             }
@@ -66,7 +66,7 @@ extension PokemonVC: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let DetailVC = storyboard.instantiateViewController(withIdentifier: "Pokemon") as! PokemonDetailVC
-        DetailVC.pokemon = myImages[indexPath.row]
+        DetailVC.pokemon = myPokemon[indexPath.row]
         DetailVC.modalTransitionStyle = .crossDissolve
         DetailVC.modalPresentationStyle = .overCurrentContext
         self.present(DetailVC, animated: true, completion: nil)

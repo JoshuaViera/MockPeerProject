@@ -20,7 +20,7 @@ final class PokemonAPIClient {
             }
             if let data = data {
                 do {
-                    let pokemon = try JSONDecoder().decode(Cards.self, from: data)
+                    let pokemon = try JSONDecoder().decode(PokemonCards.self, from: data)
                     completionHandler(nil, pokemon.cards)
                 }catch {
                     completionHandler(AppError.decodingError(error), nil)

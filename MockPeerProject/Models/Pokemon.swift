@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Cards: Codable {
+struct PokemonCards: Codable {
     var cards: [Pokemon]
 }
 
