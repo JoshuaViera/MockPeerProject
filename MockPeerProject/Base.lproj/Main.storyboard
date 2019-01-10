@@ -187,6 +187,7 @@
                     </view>
                     <connections>
                         <outlet property="collectionView" destination="oAn-aB-PeS" id="yPS-Cv-BCa"/>
+                        <outlet property="loading" destination="LpT-6v-Wid" id="zCc-uI-BgC"/>
                         <outlet property="pokemonPhoto" destination="oxE-bv-m4C" id="Vog-ca-Avo"/>
                     </connections>
                 </viewController>

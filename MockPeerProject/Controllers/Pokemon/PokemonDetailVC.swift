@@ -10,6 +10,7 @@ import UIKit
 
 class PokemonDetailVC: UIViewController {
     
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     @IBOutlet weak var pokemonPhoto: UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -23,6 +24,7 @@ class PokemonDetailVC: UIViewController {
     }
     
     func updateUI() {
+        loading.startAnimating()
         ImageHelper.shared.fetchImage(urlString: (pokemon?.imageUrlHiRes) ?? "no url", completionHandler: { (error, image) in
             
             if let error = error {
@@ -30,7 +32,9 @@ class PokemonDetailVC: UIViewController {
             }
             
             if let image = image {
+                self.loading.stopAnimating()
                 self.pokemonPhoto.image = image
+                
             }
         })
         
@@ -52,12 +56,14 @@ extension PokemonDetailVC : UICollectionViewDataSource {
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        loading.startAnimating()
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AttackDetailCell", for: indexPath) as? AttackDetailCell else {return UICollectionViewCell() }
         if let poke = pokemon?.attacks[indexPath.row]{
             cell.attackName.text = "ATK:\(poke.name ?? "")"
             cell.attackPower.text = "DMG:\(poke.damage ?? "Error")"
             cell.attackDescription.text = poke.text ?? "Error"
         }
+        loading.stopAnimating()
         return cell
     }
 }
