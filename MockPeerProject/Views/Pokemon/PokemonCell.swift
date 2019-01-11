@@ -11,7 +11,7 @@ import UIKit
 class PokemonCell: UICollectionViewCell {
     
     @IBOutlet weak var pokemonImage: UIImageView!
-    
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     
     override func prepareForReuse() {
         pokemonImage.image = nil 

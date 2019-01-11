@@ -12,7 +12,7 @@ class MagicCell: UICollectionViewCell {
 //
 
     @IBOutlet weak var magicPhoto: UIImageView!
-    
+    @IBOutlet weak var loading: UIActivityIndicatorView!
     override func prepareForReuse() {
         magicPhoto.image = nil
     }

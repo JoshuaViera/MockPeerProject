@@ -37,7 +37,7 @@ class PokemonDetailVC: UIViewController {
                 
             }
         })
-        
+        loading.hidesWhenStopped = true
     }
     
     @IBAction func dimiss(_ sender: UIButton) {
@@ -56,16 +56,18 @@ extension PokemonDetailVC : UICollectionViewDataSource {
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        loading.startAnimating()
+        
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "AttackDetailCell", for: indexPath) as? AttackDetailCell else {return UICollectionViewCell() }
         if let poke = pokemon?.attacks[indexPath.row]{
             cell.attackName.text = "ATK:\(poke.name ?? "")"
             cell.attackPower.text = "DMG:\(poke.damage ?? "Error")"
             cell.attackDescription.text = poke.text ?? "Error"
         }
-        loading.stopAnimating()
+        
         return cell
+        
     }
+
 }
 extension PokemonDetailVC : UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

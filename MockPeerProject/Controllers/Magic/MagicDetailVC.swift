@@ -24,7 +24,6 @@ class MagicDetailVC: UIViewController {
     @IBAction func dismiss(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
-    
 }
 
 extension MagicDetailVC : UICollectionViewDataSource {
@@ -33,10 +32,11 @@ extension MagicDetailVC : UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MagicDetailCell", for: indexPath) as? MagicDetailCell else {return UICollectionViewCell() }
         
-        
         if let magi = magic?.foreignNames[indexPath.row]{
+            cell.loading.startAnimating()
             ImageHelper.shared.fetchImage(urlString: (magic?.imageUrl) ?? "no url", completionHandler: { (error, image) in
                 
                 if let error = error {
@@ -44,13 +44,14 @@ extension MagicDetailVC : UICollectionViewDataSource {
                 }
                 
                 if let image = image {
+                    cell.loading.stopAnimating()
                     cell.magicPhoto.image = image
+                    cell.loading.hidesWhenStopped = true
                 }
                 cell.langauge.text = magi.language
                 cell.magicDescription.text = magi.text
                 cell.name.text = magi.name
             })
-            
         }
         return cell
     }

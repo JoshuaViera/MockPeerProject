@@ -44,12 +44,15 @@ extension MagicVC: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MagicCell", for: indexPath) as? MagicCell else {return UICollectionViewCell()}
         
+        cell.loading.startAnimating()
         ImageHelper.shared.fetchImage(urlString: myMagic[indexPath.row].imageUrl ?? "") { (error, image) in
             if let error = error{
                 print("\(error)")
             }
             if let image = image {
+                
                 cell.magicPhoto.image = image
+                cell.loading.stopAnimating()
             }
         }
         return cell

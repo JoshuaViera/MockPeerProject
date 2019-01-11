@@ -12,6 +12,7 @@ class PokemonVC: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+
     var myPokemon = [Pokemon](){
         didSet{
             DispatchQueue.main.async{
@@ -31,9 +32,9 @@ class PokemonVC: UIViewController {
             }
             if let pokemon = pokemon {
                 self.myPokemon = pokemon
-//                print(pokemon.count)
             }
         }
+
     }
     
     
@@ -50,10 +51,12 @@ extension PokemonVC: UICollectionViewDataSource {
             if let error = error{
                 print("\(error)")
             }
+            cell.loading.startAnimating()
             if let image = image {
-                 cell.pokemonImage.image = image
+                cell.pokemonImage.image = image
+                cell.loading.stopAnimating()
             }
-        } 
+        }
         return cell
     }
 }
